@@ -83,18 +83,6 @@ void loop() {
   lastButtonState = buttonState;
   prevStop = stopState;
   FastLED.show();
-  
-  /*
-   int currentMode = 0;
-   if (digitalRead(CYCLE_BUTTON) == LOW) {
-    Serial.println("switching");
-    Serial.println(currentMode);
-    }
-  else {
-    Serial.println("pressed");
-    currentMode = 2;
-    Serial.println(currentMode);
-  }*/
 }
 
 void lightOne() {
@@ -123,17 +111,6 @@ void randomColors() {
   int pos = random16(NUM_LEDS);
   leds[pos] += CHSV( random8(64), 200, 255);
 }
-  
-  /*for (int i = 0; i < NUM_LEDS; i++) {
-    leds[i] = CRGB(125, 255, 250);
-    FastLED.show();
-    delay(500);
-  }
-  FastLED.clear();
-  /*Pink*/
-  /*for (int i = 4; i > NUM_LEDS; i--) {
-    leds[i] = CRGB(243, 129, 255);
-  }*/
 
 void pingPong() {
     fadeToBlackBy( leds, NUM_LEDS, 20);
