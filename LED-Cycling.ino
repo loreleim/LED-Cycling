@@ -82,9 +82,7 @@ void loop() {
     turnOff();
     currentMode = 1;
   }
-  if (currentMode == 8) {
-    currentMode = 0;
-  }
+
   // replaces current state as last one
   lastButtonState = buttonState;
   prevStop = stopState;
