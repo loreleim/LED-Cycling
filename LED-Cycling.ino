@@ -80,6 +80,7 @@ void loop() {
   
   if (currentMode == 7) {
     turnOff();
+    currentMode = 1;
   }
   if (currentMode == 8) {
     currentMode = 0;
