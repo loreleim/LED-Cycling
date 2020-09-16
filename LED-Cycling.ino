@@ -31,9 +31,11 @@ void loop() {
 
   if (stopState != prevStop) {
     if (stopState == HIGH) {
-      Serial.println("chicken");
+      Serial.println("Reset Strip");
+      turnOff();
+      currentMode = 0;
     }
-    else {Serial.println("other");}
+    else {/*Serial.println("other");*/}
   }
 
   if (buttonState != lastButtonState) {
