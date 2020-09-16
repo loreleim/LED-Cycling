@@ -50,7 +50,10 @@ void loop() {
     }
     delay(10); //avoids debounding
   }
-  
+
+  if (currentMode == 0) {
+    turnOff();
+  }
   if (currentMode == 1) {
     lightOne();
   }
