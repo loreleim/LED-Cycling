@@ -86,21 +86,25 @@ void loop() {
   // replaces current state as last one
   lastButtonState = buttonState;
   prevStop = stopState;
+
   FastLED.show();
 }
 
 void lightOne() {
   leds[0] = CRGB(255, 255, 0);
+  FastLED.setBrightness(beatsin8(50,0,20)); //beatsin8(bpm, min, max)
 }
 
 void lightTwo() {
   FastLED.clear();
   leds[1] = CRGB(0, 255, 0);
+  FastLED.setBrightness(beatsin8(50,0,20)); //beatsin8(bpm, min, max)
 }
 
 void lightThree() {
   FastLED.clear();
   leds[2] = CRGB(0, 0, 255);
+  FastLED.setBrightness(beatsin8(50,0,20)); //beatsin8(bpm, min, max)
 }
 
 void allTogether() {
@@ -108,6 +112,7 @@ void allTogether() {
   leds[0] = CRGB(255, 255, 0);
   leds[1] = CRGB(0, 255, 0);
   leds[2] = CRGB(0, 0, 255);
+  7FastLED.setBrightness(beatsin8(50,0,20)); //beatsin8(bpm, min, max)
 }
 
 void randomColors() {
@@ -117,7 +122,7 @@ void randomColors() {
 }
 
 void pingPong() {
-    fadeToBlackBy( leds, NUM_LEDS, 20);
+  fadeToBlackBy( leds, NUM_LEDS, 20);
   int pos = beatsin16( 13, 0, NUM_LEDS-1 );
   leds[pos] += CRGB( 243, 129, 255);
 }
